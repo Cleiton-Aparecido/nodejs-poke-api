@@ -1,0 +1,30 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        align-self: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+
+    &__link {
+        &:visited,
+        &:link {
+            color: $font-color-primary;
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

@@ -4,6 +4,6 @@ export function Main () {
     return (
         <main className="main">
             <SearchContainer />
-        </main>
+        </main> 
     )
 }

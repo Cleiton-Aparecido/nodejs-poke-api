@@ -1,9 +1,11 @@
 import { Navigation } from "../Navigation/Navigation"
 
+const logoURL = "../../public/logo.png"
+
 export function Header () {
     return (
         <header className="header">
-           <img className="logo" />
+           <img className="header__logo" src={logoURL} />
 
             <Navigation />
 

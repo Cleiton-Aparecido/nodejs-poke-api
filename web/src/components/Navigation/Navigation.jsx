@@ -1,22 +1,22 @@
 export function Navigation () {
     return (
         <nav className="navigation">
-            <ul className="navaigation__list">
+            <ul className="navigation__list">
                 <li className="navigation__item">
                     <a href="#" className="navigation__link" target={"_blank"}>
-                        Link 1
+                        Home
                     </a>
                 </li>
 
                 <li className="navigation__item">
                     <a href="#" className="navigation__link" target={"_blank"}>
-                        Link 2
+                        List
                     </a>
                 </li>
 
                 <li className="navigation__item">
                     <a href="#" className="navigation__link" target={"_blank"}>
-                        Link 3
+                        Battle
                     </a>
                 </li>
             </ul>

@@ -1,0 +1,19 @@
+.header {
+    background-color: $color-aqua-dark;
+
+    font-size: 1.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 95%;
+    padding: 3rem;
+    margin-top: 2rem;
+
+    border-radius: $small-border-radius;
+
+    &__logo {
+        width: 10rem;
+    }
+}
