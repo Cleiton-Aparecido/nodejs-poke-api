@@ -7,8 +7,12 @@ $color-aqua-light-2: #83deff;
 
 $font-color-primary: whitesmoke;
 
+$confirm-color: #77dd77;
+$cancel-color: #FF0000;
+
 // FONTS 
 $default-font-size: 1.6rem;
+$default-font-family: Inter, Roboto, sans-serif;
 
 // SHADOWS
 $shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
@@ -17,3 +21,8 @@ $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 // BORDER RADIUS
 $default-border-radius: 2.5rem;
 $small-border-radius: 1.5rem;
+$smallest-border-radius: .8rem;
+
+// BORDER
+$default-border: .2rem solid #000000;
+$grey-border: .2rem solid grey;

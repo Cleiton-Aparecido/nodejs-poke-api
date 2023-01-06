@@ -1,6 +1,11 @@
 .navigation {
     display: flex;
     align-items: center;
+    align-self: stretch;
+    justify-content: flex-start;
+    flex: 1;
+    margin: 0 8rem;
+    border-bottom: .2rem solid;
 
     &__list {
         display: flex;
@@ -8,23 +13,24 @@
         justify-content: space-between;
         list-style: none;
         align-self: center;
+        gap: 4rem;
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 3rem;
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__link {
         &:visited,
         &:link {
-            color: $font-color-primary;
+            color: #000;
             text-decoration: none;
-        }
-
-        &:focus {
-            text-decoration: underline;
         }
     }
 }

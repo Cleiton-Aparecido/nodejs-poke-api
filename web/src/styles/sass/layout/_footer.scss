@@ -1,0 +1,26 @@
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border-top: 2px solid black;
+    margin: 8rem auto;
+    background-color: whitesmoke;
+    padding: 8rem 16rem;
+
+    text-align: center;
+
+    border-radius: 0 0 $small-border-radius $small-border-radius;
+
+    &__text-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+    }
+
+    &__legal {
+        margin-top: 8rem;
+    }
+
+}
