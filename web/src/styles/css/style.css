@@ -74,7 +74,7 @@ body {
   border-radius: 0.8rem;
   overflow: hidden;
   margin: 6.4rem auto 0;
-  padding: 0.8rem;
+  padding: 1.6rem;
 }
 .pokecard__display {
   width: 100%;
@@ -93,6 +93,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1.6rem 0;
+  margin: 2.4rem 0;
   width: 100%;
 }
 .pokecard__detail--top {
@@ -102,9 +103,9 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6.4rem;
-  padding: 3.2rem;
+  justify-content: space-around;
+  padding: 1.6rem 3.2rem;
+  margin: 1.6rem 0;
   font-size: 1.2rem;
 }
 .pokecard__detail--left {
@@ -216,7 +217,7 @@ body {
   flex-direction: column;
   align-items: center;
   align-content: space-around;
-  width: 70%;
+  width: 80%;
   margin: 16rem auto;
   padding: 8rem;
 }
