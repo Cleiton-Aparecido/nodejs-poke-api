@@ -1,0 +1,77 @@
+.pokecard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    width: 70%;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: $smallest-border-radius;
+    overflow: hidden;
+    margin: 6.4rem auto 0;
+
+    padding: .8rem;
+    
+    &__display {
+
+        width: 100%;
+
+        background-image: url(../../../../public/pokemon_background.png);
+        background-size: cover;
+        background-position: center;
+
+        border-radius: $smallest-border-radius;
+
+        &--img {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1.6rem 0;
+
+        width: 100%;
+
+        &--top {
+            font-size: 1.5rem;
+        }
+
+        &--center {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6.4rem;
+            padding: 3.2rem;
+
+            font-size: 1.2rem;
+        }
+
+        &--left {
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        &--right {
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        &--bottom {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.pokemon {
+    &__name {
+        text-transform: capitalize;
+    }
+}
