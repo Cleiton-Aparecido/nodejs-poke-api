@@ -6,6 +6,7 @@ import { THEME } from './styles/variables'
 
 import axios from 'axios'
 
+import { Card } from './components/Card/Card'
 import { Header } from './components/Header/Header'
 import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
@@ -74,58 +75,18 @@ function App() {
 
             {pokemonData.map((data) => {
                 return (
-                    <div className="pokecard" key={data}>
-                        <div className='pokecard__display'>
-                          <img src={data.sprites["front_default"]} className="pokecard__display--img"/>
-                        </div>
-
-                        <div className="pokecard__detail">
-
-                            <section className='pokecard__detail--top'>
-                                <h3 className='pokemon__name'>
-                                  {data.name}
-                                </h3>
-                            </section>
-
-                            <div className='pokecard__detail--center'>
-                              <section className="pokecard__detail--left">
-                                  <p className="pokecard__detail--paragraph">
-                                      Type:
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                      Height:
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                      Weight:
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                      Number of Battles:
-                                  </p>
-                              </section>
-
-                              <section className="pokecard__detail--right">
-                                  <p className="pokecard__detail--paragraph">
-                                      {pokemonType}
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                      {" "}{Math.round(data.height * 10)}cm
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                      {" "}{Math.round(data.weight / 10)} Kg
-                                  </p>
-                                  <p className="pokecard__detail--paragraph">
-                                    {data.game_indices.length}
-                                  </p>
-                              </section>
-                            </div>
-
-                            
-
-                            <section className='pokecard__detail--bottom'>
-                                <h4>#{data.order}</h4>
-                            </section>
-                        </div>
-                    </div>
+                    <Card
+                      key={data.id}
+                      id={data.id}
+                      sprite={data.sprites["front_default"]}
+                      name={data.name}
+                      type={pokemonType}
+                      height={data.height}
+                      weight={data.weight}
+                      battles={data.game_indices.length}
+                      order={data.order}
+                    
+                    />
                 )
             })}
         </div>

@@ -75,6 +75,7 @@ body {
   overflow: hidden;
   margin: 6.4rem auto 0;
   padding: 1.6rem;
+  transition: all 0.2s ease-in;
 }
 .pokecard__display {
   width: 100%;
