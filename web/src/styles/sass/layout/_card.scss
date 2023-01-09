@@ -1,9 +1,8 @@
 .pokecard {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    width: 70%;
-
+    border: $grey-border;
+    width: 25%;
     align-items: center;
     justify-content: center;
 
@@ -22,11 +21,12 @@
         background-position: center;
 
         border-radius: $smallest-border-radius;
+        border: $grey-border;
 
         &--img {
             display: block;
             width: 50%;
-            margin: 0 auto;
+            margin: auto;
         }
     }
 
@@ -35,11 +35,13 @@
         flex-direction: column;
         align-items: center;
 
-        padding: 1.6rem 0;
-
-        margin: 2.4rem 0;
+        margin: 1.25rem 0;
+        padding: 1.25rem;
 
         width: 100%;
+
+        border: $grey-border;
+        border-radius: $smallest-border-radius;
 
         &--top {
             font-size: 1.5rem;
@@ -49,9 +51,8 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 1.6rem 3.2rem;
-            margin: 1.6rem 0;
             font-size: 1.2rem;
         }
 

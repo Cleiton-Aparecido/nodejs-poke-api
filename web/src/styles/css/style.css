@@ -67,8 +67,8 @@ body {
 .pokecard {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
-  width: 70%;
+  border: 0.2rem solid grey;
+  width: 25%;
   align-items: center;
   justify-content: center;
   border-radius: 0.8rem;
@@ -82,19 +82,22 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 0.8rem;
+  border: 0.2rem solid grey;
 }
 .pokecard__display--img {
   display: block;
   width: 50%;
-  margin: 0 auto;
+  margin: auto;
 }
 .pokecard__detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.6rem 0;
-  margin: 2.4rem 0;
+  margin: 1.25rem 0;
+  padding: 1.25rem;
   width: 100%;
+  border: 0.2rem solid grey;
+  border-radius: 0.8rem;
 }
 .pokecard__detail--top {
   font-size: 1.5rem;
@@ -103,9 +106,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1.6rem 3.2rem;
-  margin: 1.6rem 0;
   font-size: 1.2rem;
 }
 .pokecard__detail--left {
@@ -229,10 +231,12 @@ body {
 }
 .search-container__hero {
   width: 100%;
+  max-width: 80rem;
 }
 .search-container__input {
   margin-top: 2.5rem;
   background-color: whitesmoke;
+  max-width: 75rem;
 }
 .search-container__btn {
   margin-top: 4rem;

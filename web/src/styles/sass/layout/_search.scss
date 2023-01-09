@@ -19,11 +19,13 @@
 
     &__hero {
         width: 100%;
+        max-width: 80rem;
     }
 
     &__input {
         margin-top: 2.5rem;
         background-color: $font-color-primary;
+        max-width: 75rem;
     }
 
     &__btn {
