@@ -26,7 +26,7 @@ export function Card({id, sprite, name, type, height, weight, battles, order}) {
                             Weight:
                         </p>
                         <p className="pokecard__detail--paragraph">
-                            Number of Battles:
+                            Encounters:
                         </p>
                     </section>
 

@@ -73,23 +73,25 @@ function App() {
                 <button className="search-container__btn btn">Search</button>
             </form>
 
-            {pokemonData.map((data) => {
-                return (
-                    <Card
-                      key={data.id}
-                      id={data.id}
-                      sprite={data.sprites["front_default"]}
-                      name={data.name}
-                      type={pokemonType}
-                      height={data.height}
-                      weight={data.weight}
-                      battles={data.game_indices.length}
-                      order={data.order}
-                    
-                    />
-                )
-            })}
         </div>
+
+        {pokemonData.map((data) => {
+            return (
+                <Card
+
+                  key={data.id}
+                  id={data.id}
+                  sprite={data.sprites["front_default"]}
+                  name={data.name}
+                  type={pokemonType}
+                  height={data.height}
+                  weight={data.weight}
+                  battles={data.game_indices.length}
+                  order={data.order}
+                
+                />
+            )
+        })}
 
         <Footer />
         
