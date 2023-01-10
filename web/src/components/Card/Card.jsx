@@ -47,7 +47,8 @@ export function Card({id, sprite, name, type, height, weight, battles, order}) {
                 </div>
 
                 <section className='pokecard__detail--bottom'>
-                    <h4>#{order}</h4>
+                    <h4>N°{order}</h4>
+                    <h4>#{id}</h4>
                 </section>
             </div>
         </div>

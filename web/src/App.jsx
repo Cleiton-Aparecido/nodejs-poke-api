@@ -18,6 +18,11 @@ function App() {
   const [pokemonData, setPokemonData] = useState([])
   const [pokemonType, setPokemonType] = useState("")
 
+  const [preEvolution, setPreEvolution] = useState([])
+  const [evolution, setEvolution] = useState([])
+
+  const searchBtn = document.querySelector("#search-btn")
+
   const getPokemon = async () => {
 
     const toArray = []
@@ -34,10 +39,24 @@ function App() {
 
       console.log(res)
 
-    } catch (err) {
+      handleErrorReset()
 
-      console.log(err)
+    } catch(err) {
+
+      handleError(err)
     }
+  }
+
+  const handleError = (err) => {
+    console.log(err)
+    searchBtn.style.backgroundColor = "red"
+    searchBtn.innerText = "Not Found :/"
+
+  }
+
+  const handleErrorReset = () => {
+    searchBtn.style.backgroundColor = "#77dd77"
+    searchBtn.innerText = "Search"
   }
 
   const handleChange = (event) => {
@@ -47,7 +66,13 @@ function App() {
 
   const handleSubmit = (event) => {
 
+    const searchInput = document.querySelector(".search-container__input")
+
     event.preventDefault()
+
+    searchInput.value = ""
+    searchInput.focus()
+
     getPokemon()
 
   }
@@ -70,7 +95,7 @@ function App() {
 
                 <input className="search-container__input input" onChange={handleChange} type={"text"} placeholder="Search Here"></input>
 
-                <button className="search-container__btn btn">Search</button>
+                <button id='search-btn' className="search-container__btn btn">Search</button>
             </form>
 
         </div>
