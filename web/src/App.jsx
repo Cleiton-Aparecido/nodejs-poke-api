@@ -2,6 +2,8 @@
 //import reactLogo from './assets/react.svg'
 import '../src/styles/css/style.css'
 
+import randomId from "./utils/connectApi"
+
 import { THEME } from './styles/variables'
 
 import axios from 'axios'
@@ -10,16 +12,14 @@ import { Card } from './components/Card/Card'
 import { Header } from './components/Header/Header'
 import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Component } from 'react'
 
 function App() {
 
-  const [pokemon, setPokemon] = useState("pikachu")
+  // STATES
+  const [pokemon, setPokemon] = useState(randomId())
   const [pokemonData, setPokemonData] = useState([])
   const [pokemonType, setPokemonType] = useState("")
-
-  const [preEvolution, setPreEvolution] = useState([])
-  const [evolution, setEvolution] = useState([])
 
   const searchBtn = document.querySelector("#search-btn")
 
@@ -77,6 +77,10 @@ function App() {
 
   }
 
+  const handleRandomPokemon = () => {
+    setPokemon(randomId())
+  }
+
   useEffect(() => {
     
     getPokemon()
@@ -93,9 +97,18 @@ function App() {
             
             <form className="search-container__form" onSubmit={handleSubmit}>
 
-                <input className="search-container__input input" onChange={handleChange} type={"text"} placeholder="Search Here"></input>
+                <input className="search-container__input input" onChange={handleChange} type={"search"} results={5} placeholder="Search Here"></input>
 
-                <button id='search-btn' className="search-container__btn btn">Search</button>
+                <section className='button-container'>
+
+                  <button id='search-btn' className="button-container__btn-search search-btn btn" title='Search for a Pokémon'>Search</button>
+
+                  <button id='random-btn' className='button-container__btn-random random-btn btn' title='Random Pokémon' onClick={handleRandomPokemon}>
+                    <span className='random-btn__icon'></span>
+                  </button>
+
+                </section>
+
             </form>
 
         </div>

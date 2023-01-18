@@ -1,24 +1,25 @@
+import { NavigationItem } from "../NavigationItem/NavigationItem"
+
 export function Navigation () {
     return (
         <nav className="navigation">
             <ul className="navigation__list">
-                <li className="navigation__item">
-                    <a href="#" className="navigation__link" target={"_blank"}>
-                        Home
-                    </a>
-                </li>
 
-                <li className="navigation__item">
-                    <a href="#" className="navigation__link" target={"_blank"}>
-                        List
-                    </a>
-                </li>
+               <NavigationItem
+                    url={"#"}
+                    title={"Main"}
+                />
 
-                <li className="navigation__item">
-                    <a href="#" className="navigation__link" target={"_blank"}>
-                        Battle
-                    </a>
-                </li>
+               <NavigationItem
+                    url={"#"}
+                    title={"List"}
+               />
+
+               <NavigationItem
+                    url={"#"}
+                    title={"Fight"}
+                />
+
             </ul>
         </nav>
     )

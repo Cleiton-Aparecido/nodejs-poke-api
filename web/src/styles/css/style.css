@@ -13,13 +13,10 @@ html {
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  padding: 5rem;
-  background-color: #104a62;
 }
 
 .content {
-  min-height: 100vh;
-  border-radius: 2.5rem;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +40,6 @@ body {
 
 .btn {
   border: none;
-  padding: 2rem 4rem;
   border-radius: 0.8rem;
   cursor: pointer;
 }
@@ -62,6 +58,19 @@ body {
   color: #000;
   font-family: Inter, Roboto, sans-serif;
   font-size: 1.6rem;
+}
+.input::-webkit-search-cancel-button {
+  background-color: #000;
+  color: black;
+}
+
+.random-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1.5rem;
+  background: rgb(0, 102, 255) url(../../../../public/shuffle.svg);
+  background-size: 80%;
+  background-position: center;
 }
 
 .pokecard {
@@ -109,13 +118,12 @@ body {
   gap: 3.2rem;
   padding: 1.6rem 3.2rem;
   font-size: 1.2rem;
+  text-transform: capitalize;
 }
 .pokecard__detail--left {
-  text-transform: capitalize;
   font-weight: bold;
 }
 .pokecard__detail--right {
-  text-transform: capitalize;
   font-weight: 600;
 }
 .pokecard__detail--bottom {
@@ -164,16 +172,16 @@ body {
 }
 
 .header {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin: 4rem auto;
   width: 95%;
-  padding-top: 4rem;
-  border-radius: 1.5rem;
 }
 .header__logo {
-  width: 12rem;
+  width: 8.5rem;
 }
 
 .user {
@@ -181,40 +189,58 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  cursor: pointer;
+}
+.user:hover {
+  text-decoration: underline;
 }
 .user__icon {
   box-sizing: content-box;
   border: 0.2rem solid grey;
   border-radius: 50%;
-  width: 7rem;
+  width: 6rem;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  align-self: stretch;
+  align-self: center;
   justify-content: flex-start;
-  flex: 1;
   margin: 0 8rem;
-  border-bottom: 0.2rem solid;
 }
 .navigation__list {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
   list-style: none;
-  align-self: center;
   gap: 4rem;
+}
+.navigation__item {
+  text-transform: capitalize;
 }
 .navigation__item:not(:last-child) {
   margin-right: 3rem;
 }
-.navigation__item:hover {
-  text-decoration: underline;
+.navigation__link {
+  border-radius: 2.5rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease;
 }
 .navigation__link:visited, .navigation__link:link {
   color: #000;
   text-decoration: none;
+}
+.navigation__link:hover {
+  background-color: #107394;
+  color: whitesmoke;
+}
+.navigation__link--selected {
+  background-color: #107394;
+  color: whitesmoke;
+}
+.navigation__link--selected:hover {
+  opacity: 1.2;
 }
 
 .search-container {
@@ -233,17 +259,26 @@ body {
   align-items: center;
 }
 .search-container__hero {
-  width: 100%;
-  max-width: 80rem;
+  max-width: 60%;
 }
 .search-container__input {
   margin-top: 2.5rem;
   background-color: whitesmoke;
-  max-width: 75rem;
+  max-width: 55%;
 }
-.search-container__btn {
-  margin-top: 4rem;
+.search-container .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.5rem;
+}
+.search-container .button-container__btn-search {
+  padding: 2rem 4rem;
   background-color: #77dd77;
+}
+.search-container .button-container__btn-random {
+  align-self: baseline;
 }
 
 /*# sourceMappingURL=style.css.map */

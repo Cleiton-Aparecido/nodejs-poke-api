@@ -18,18 +18,32 @@
     }
 
     &__hero {
-        width: 100%;
-        max-width: 80rem;
+        max-width: 60%;
     }
 
     &__input {
         margin-top: 2.5rem;
         background-color: $font-color-primary;
-        max-width: 75rem;
+        max-width: 55%;
     }
 
-    &__btn {
-        margin-top: 4rem;
-        background-color: $confirm-color;
+    .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        padding: 2.5rem;
+
+        
+
+        &__btn-search {
+            padding: 2rem 4rem;
+            background-color: $confirm-color;
+        }
+
+        &__btn-random {
+            align-self: baseline;
+        }
     }
 }
