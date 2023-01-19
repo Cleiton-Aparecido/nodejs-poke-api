@@ -18,13 +18,26 @@
     }
 
     &__hero {
-        max-width: 60%;
+        max-width: 55%;
     }
 
     &__input {
         margin-top: 2.5rem;
         background-color: $font-color-primary;
-        max-width: 55%;
+        max-width: 50%;
+
+        &::grammar-error {
+           text-decoration: none;
+        }
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+        }
+    }
+
+    & &__input:valid ~ .button-container .button-container__btn-search {
+        pointer-events: all;
+        opacity: 1;
     }
 
     .button-container {
@@ -35,15 +48,16 @@
 
         padding: 2.5rem;
 
-        
-
         &__btn-search {
+            pointer-events: none;
+            opacity: .4;
             padding: 2rem 4rem;
             background-color: $confirm-color;
         }
 
         &__btn-random {
             align-self: baseline;
+            background-color: $color-aqua-dark-2;
         }
     }
 }

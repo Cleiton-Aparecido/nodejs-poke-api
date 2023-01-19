@@ -13,6 +13,8 @@ html {
 body {
   box-sizing: border-box;
   min-height: 100vh;
+  background-color: #107394;
+  padding: 4rem;
 }
 
 .content {
@@ -21,6 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  border-radius: 0.8rem;
   background-color: #FFF;
   color: #000;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -58,6 +61,8 @@ body {
   color: #000;
   font-family: Inter, Roboto, sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
 }
 .input::-webkit-search-cancel-button {
   background-color: #000;
@@ -144,7 +149,7 @@ body {
   border-top: 2px solid black;
   background-color: whitesmoke;
   padding: 8rem 16rem;
-  margin: 16rem auto 8rem;
+  margin: 32rem auto 8rem;
   text-align: center;
   border-radius: 0 0 1.5rem 1.5rem;
 }
@@ -259,12 +264,22 @@ body {
   align-items: center;
 }
 .search-container__hero {
-  max-width: 60%;
+  max-width: 55%;
 }
 .search-container__input {
   margin-top: 2.5rem;
   background-color: whitesmoke;
-  max-width: 55%;
+  max-width: 50%;
+}
+.search-container__input::grammar-error {
+  text-decoration: none;
+}
+.search-container__input::-webkit-search-cancel-button {
+  appearance: none;
+}
+.search-container .search-container__input:valid ~ .button-container .button-container__btn-search {
+  pointer-events: all;
+  opacity: 1;
 }
 .search-container .button-container {
   display: flex;
@@ -274,11 +289,14 @@ body {
   padding: 2.5rem;
 }
 .search-container .button-container__btn-search {
+  pointer-events: none;
+  opacity: 0.4;
   padding: 2rem 4rem;
   background-color: #77dd77;
 }
 .search-container .button-container__btn-random {
   align-self: baseline;
+  background-color: #107394;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,6 +10,8 @@
 
     font-family: $default-font-family;
     font-size: $default-font-size;
+    font-weight: 500;
+    letter-spacing: .2rem;
 
     &::-webkit-search-cancel-button {
         background-color: #000;
