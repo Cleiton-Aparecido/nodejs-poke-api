@@ -3,12 +3,14 @@
 import '../src/styles/css/style.css'
 
 import randomId from "./utils/connectApi"
+import { handlePokeName } from './utils/nameHandler'
+import { searchHandler } from './utils/searchHandler'
 
 import axios from 'axios'
 
 import { Card } from './components/Card/Card'
 import { Header } from './components/Header/Header'
-import { Main } from './components/Main/Main'
+//import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
 import { useState, useEffect } from 'react'
 
@@ -47,7 +49,7 @@ function App() {
 
   const handleChange = (event) => {
 
-    setPokemon(event.target.value.toLowerCase())
+    setPokemon(searchHandler(event.target.value.toLowerCase()))
   }
 
   const handleSubmit = (event) => {
@@ -84,7 +86,7 @@ function App() {
             
             <form className="search-container__form" onSubmit={handleSubmit}>
 
-                <input className="search-container__input input" onChange={handleChange} type={"search"} required minLength={3} maxLength={20} placeholder="Search Here"></input>
+                <input className="search-container__input input" onChange={handleChange} type={"search"} required minLength={3} maxLength={35} placeholder="Search Here"></input>
 
                 <section className='button-container'>
 
@@ -105,7 +107,7 @@ function App() {
                   key={data.id}
                   id={data.id}
                   sprite={data.sprites["front_default"]}
-                  name={data.name}
+                  name={handlePokeName(data.name)}
                   type={pokemonType}
                   height={data.height}
                   weight={data.weight}
