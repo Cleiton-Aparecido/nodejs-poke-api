@@ -1,3 +1,129 @@
+.normal {
+  --primary-color: #CCC9AA;
+  --secondary-color: #EAEADE;
+  --tertiary-color: #F4F5F0;
+  --quarternary-color: #ABABAB;
+}
+
+.grass {
+  --primary-color: #204000;
+  --secondary-color: #409608;
+  --tertiary-color: #68F60B;
+  --quarternary-color: #EFFEE7;
+}
+
+.fire {
+  --primary-color: #FC0C0A;
+  --secondary-color: #F57F0B;
+  --tertiary-color: #F8B80D;
+  --quarternary-color: #FFEAC5;
+}
+
+.water {
+  --primary-color: #09517A;
+  --secondary-color: #0C79BE;
+  --tertiary-color: #36AFF6;
+  --quarternary-color: #F1FAFF;
+}
+
+.flying {
+  --primary-color: #075966;
+  --secondary-color: #5EB8B4;
+  --tertiary-color: #DCE5EA;
+  --quarternary-color: #FFFFFF;
+}
+
+.bug {
+  --primary-color: #91BA30;
+  --secondary-color: #BEDD6E;
+  --tertiary-color: #D8FC9D;
+  --quarternary-color: #FFFFFF;
+}
+
+.poison {
+  --primary-color: #621580;
+  --secondary-color: #A82AD6;
+  --tertiary-color: #CA72EB;
+  --quarternary-color: #F6E9FD;
+}
+
+.electric {
+  --primary-color: #969104;
+  --secondary-color: #FFFA25;
+  --tertiary-color: #F7FC84;
+  --quarternary-color: #FFFAD6;
+}
+
+.ground {
+  --primary-color: #BFAC22;
+  --secondary-color: #E2D25B;
+  --tertiary-color: #F0E295;
+  --quarternary-color: #FFFFFF;
+}
+
+.fighting {
+  --primary-color: #800B11;
+  --secondary-color: #E8131A;
+  --tertiary-color: #D46065;
+  --quarternary-color: #FFAEAA;
+}
+
+.psychic {
+  --primary-color: #8B0633;
+  --secondary-color: #EC0F64;
+  --tertiary-color: #F55792;
+  --quarternary-color: #FCB6D0;
+}
+
+.rock {
+  --primary-color: #473F26;
+  --secondary-color: #786B3F;
+  --tertiary-color: #958350;
+  --quarternary-color: #B4A272;
+}
+
+.ice {
+  --primary-color: #113C43;
+  --secondary-color: #1B94A3;
+  --tertiary-color: #66D0E5;
+  --quarternary-color: #DCFCF7;
+}
+
+.ghost {
+  --primary-color: #472B53;
+  --secondary-color: #8F55A4;
+  --tertiary-color: #BD98CB;
+  --quarternary-color: #EFE5F1;
+}
+
+.dragon {
+  --primary-color: #291069;
+  --secondary-color: #8B56FE;
+  --tertiary-color: #D7B1FF;
+  --quarternary-color: #FFFFFF;
+}
+
+.dark {
+  --primary-color: #2E231C;
+  --secondary-color: #604733;
+  --tertiary-color: #936754;
+  --quarternary-color: #4F4F4F;
+}
+
+.steel {
+  --primary-color: #454545;
+  --secondary-color: #7C8E8A;
+  --tertiary-color: #BBC5C4;
+  --quarternary-color: #EDEFEE;
+}
+
+.fairy {
+  --primary-color: #F87EA7;
+  --secondary-color: #FFA0C2;
+  --tertiary-color: #FDD1E0;
+  --quarternary-color: #FFFFFF;
+}
+
 *,
 *::before,
 *::after {

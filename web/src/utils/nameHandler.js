@@ -1,4 +1,4 @@
-const exclusionList = ["porygon-2", "porygon-z", "ho-oh", "deoxys", "kommo-o", "hakamo-o", "jangmo-o"];
+const exclusionList = ["porygon-2", "porygon-z", "ho-oh", "deoxys", "kommo-o", "hakamo-o", "jangmo-o", "ting-lu", "chi-yu", "wo-chien"];
 
 //console.log(exclusionList.map((exclusionList) => exclusionList.toUpperCase()))
 
