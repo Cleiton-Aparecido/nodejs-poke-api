@@ -1,129 +1,263 @@
-.normal {
-  --primary-color: #CCC9AA;
-  --secondary-color: #EAEADE;
-  --tertiary-color: #F4F5F0;
-  --quarternary-color: #ABABAB;
-}
-
-.grass {
-  --primary-color: #204000;
-  --secondary-color: #409608;
-  --tertiary-color: #68F60B;
-  --quarternary-color: #EFFEE7;
-}
-
-.fire {
-  --primary-color: #FC0C0A;
-  --secondary-color: #F57F0B;
-  --tertiary-color: #F8B80D;
-  --quarternary-color: #FFEAC5;
-}
-
-.water {
-  --primary-color: #09517A;
-  --secondary-color: #0C79BE;
-  --tertiary-color: #36AFF6;
-  --quarternary-color: #F1FAFF;
-}
-
-.flying {
-  --primary-color: #075966;
-  --secondary-color: #5EB8B4;
-  --tertiary-color: #DCE5EA;
-  --quarternary-color: #FFFFFF;
+.default {
+  --primary-color: #D16BA5;
+  --secondary-color: #86A8E7;
+  --tertiary-color: #5FFBF1;
+  --quarternary-color: rgb(255, 255, 255);
 }
 
 .bug {
   --primary-color: #91BA30;
   --secondary-color: #BEDD6E;
   --tertiary-color: #D8FC9D;
-  --quarternary-color: #FFFFFF;
-}
-
-.poison {
-  --primary-color: #621580;
-  --secondary-color: #A82AD6;
-  --tertiary-color: #CA72EB;
-  --quarternary-color: #F6E9FD;
-}
-
-.electric {
-  --primary-color: #969104;
-  --secondary-color: #FFFA25;
-  --tertiary-color: #F7FC84;
-  --quarternary-color: #FFFAD6;
-}
-
-.ground {
-  --primary-color: #BFAC22;
-  --secondary-color: #E2D25B;
-  --tertiary-color: #F0E295;
-  --quarternary-color: #FFFFFF;
-}
-
-.fighting {
-  --primary-color: #800B11;
-  --secondary-color: #E8131A;
-  --tertiary-color: #D46065;
-  --quarternary-color: #FFAEAA;
-}
-
-.psychic {
-  --primary-color: #8B0633;
-  --secondary-color: #EC0F64;
-  --tertiary-color: #F55792;
-  --quarternary-color: #FCB6D0;
-}
-
-.rock {
-  --primary-color: #473F26;
-  --secondary-color: #786B3F;
-  --tertiary-color: #958350;
-  --quarternary-color: #B4A272;
-}
-
-.ice {
-  --primary-color: #113C43;
-  --secondary-color: #1B94A3;
-  --tertiary-color: #66D0E5;
-  --quarternary-color: #DCFCF7;
-}
-
-.ghost {
-  --primary-color: #472B53;
-  --secondary-color: #8F55A4;
-  --tertiary-color: #BD98CB;
-  --quarternary-color: #EFE5F1;
-}
-
-.dragon {
-  --primary-color: #291069;
-  --secondary-color: #8B56FE;
-  --tertiary-color: #D7B1FF;
-  --quarternary-color: #FFFFFF;
+  --quarternary-color: rgb(68, 68, 68);
 }
 
 .dark {
-  --primary-color: #2E231C;
-  --secondary-color: #604733;
+  --primary-color: #2e231c;
+  --secondary-color: #604733ef;
   --tertiary-color: #936754;
-  --quarternary-color: #4F4F4F;
+  --quarternary-color: rgb(245, 231, 231);
 }
 
-.steel {
-  --primary-color: #454545;
-  --secondary-color: #7C8E8A;
-  --tertiary-color: #BBC5C4;
-  --quarternary-color: #EDEFEE;
+.dragon {
+  --primary-color: #4623a0;
+  --secondary-color: #8d5ef5;
+  --tertiary-color: #d3adfc;
+  --quarternary-color: rgb(238, 222, 222);
+}
+
+.electric {
+  --primary-color: #969104de;
+  --secondary-color: #e7e41dc2;
+  --tertiary-color: #f6fc84;
+  --quarternary-color: rgb(71, 71, 71);
 }
 
 .fairy {
   --primary-color: #F87EA7;
   --secondary-color: #FFA0C2;
   --tertiary-color: #FDD1E0;
-  --quarternary-color: #FFFFFF;
+  --quarternary-color: rgba(56, 47, 47, 0.877);
 }
 
+.fighting {
+  --primary-color: #800B11;
+  --secondary-color: #E8131A;
+  --tertiary-color: #D46065;
+  --quarternary-color: rgb(44, 34, 33);
+}
+
+.fire {
+  --primary-color: #FC0C0A;
+  --secondary-color: #F57F0B;
+  --tertiary-color: #F8B80D;
+  --quarternary-color: rgb(61, 55, 45);
+}
+
+.flying {
+  --primary-color: #1f6e7a;
+  --secondary-color: #3cb1ab;
+  --tertiary-color: #ade1fd;
+  --quarternary-color: rgb(54, 63, 63);
+}
+
+.ghost {
+  --primary-color: #472B53;
+  --secondary-color: #8F55A4;
+  --tertiary-color: #BD98CB;
+  --quarternary-color: rgb(252, 236, 255);
+}
+
+.grass {
+  --primary-color: #2e5507;
+  --secondary-color: #409608;
+  --tertiary-color: #68F60B;
+  --quarternary-color: rgb(232, 255, 219);
+}
+
+.ground {
+  --primary-color: #BFAC22;
+  --secondary-color: #E2D25B;
+  --tertiary-color: #F0E295;
+  --quarternary-color: rgb(85, 82, 82);
+}
+
+.ice {
+  --primary-color: #113C43;
+  --secondary-color: #1B94A3;
+  --tertiary-color: #66D0E5;
+  --quarternary-color: rgb(205, 255, 248);
+}
+
+.normal {
+  --primary-color: #CCC9AA;
+  --secondary-color: #EAEADE;
+  --tertiary-color: #F4F5F0;
+  --quarternary-color: rgb(68, 68, 68);
+}
+
+.poison {
+  --primary-color: #621580;
+  --secondary-color: #a82ad6c5;
+  --tertiary-color: #CA72EB;
+  --quarternary-color: rgb(239, 221, 250);
+}
+
+.psychic {
+  --primary-color: #bd1e53;
+  --secondary-color: #db2068e3;
+  --tertiary-color: #F55792;
+  --quarternary-color: rgb(224, 220, 222);
+}
+
+.rock {
+  --primary-color: #473F26;
+  --secondary-color: #786B3F;
+  --tertiary-color: #958350;
+  --quarternary-color: rgb(255, 251, 239);
+}
+
+.steel {
+  --primary-color: #454545;
+  --secondary-color: #7C8E8A;
+  --tertiary-color: #BBC5C4;
+  --quarternary-color: rgb(37, 41, 39);
+}
+
+.water {
+  --primary-color: #09517A;
+  --secondary-color: #0c7abef8;
+  --tertiary-color: #36AFF6;
+  --quarternary-color: rgb(230, 246, 255);
+}
+
+/*
+.normal { // NORMAL TYPE
+    --primary-color: #CCC9AA;
+    --secondary-color: #EAEADE;
+    --tertiary-color: #F4F5F0;
+    --quarternary-color: #ABABAB;
+}
+
+.grass {
+    --primary-color: #204000;
+    --secondary-color: #409608;
+    --tertiary-color: #68F60B;
+    --quarternary-color: #EFFEE7;
+}
+
+.fire {
+    --primary-color: #FC0C0A;
+    --secondary-color: #F57F0B;
+    --tertiary-color: #F8B80D;
+    --quarternary-color: #FFEAC5;
+}
+
+.water {
+    --primary-color: #09517A;
+    --secondary-color: #0C79BE;
+    --tertiary-color: #36AFF6;
+    --quarternary-color: #F1FAFF;
+}
+
+.flying {
+    --primary-color: #075966;
+    --secondary-color: #5EB8B4;
+    --tertiary-color: #DCE5EA;
+    --quarternary-color: #FFFFFF;
+}
+
+.bug {
+    --primary-color: #91BA30;
+    --secondary-color: #BEDD6E;
+    --tertiary-color: #D8FC9D;
+    --quarternary-color: #FFFFFF;
+}
+
+.poison {
+    --primary-color: #621580;
+    --secondary-color: #A82AD6;
+    --tertiary-color: #CA72EB;
+    --quarternary-color: #F6E9FD;
+}
+
+.electric {
+    --primary-color: #969104;
+    --secondary-color: #FFFA25;
+    --tertiary-color: #F7FC84;
+    --quarternary-color: #FFFAD6;
+}
+
+.ground {
+    --primary-color: #BFAC22;
+    --secondary-color: #E2D25B;
+    --tertiary-color: #F0E295;
+    --quarternary-color: #FFFFFF;
+}
+
+.fighting {
+    --primary-color: #800B11;
+    --secondary-color: #E8131A;
+    --tertiary-color: #D46065;
+    --quarternary-color: #FFAEAA;
+}
+
+.psychic {
+    --primary-color: #8B0633;
+    --secondary-color: #EC0F64;
+    --tertiary-color: #F55792;
+    --quarternary-color: #FCB6D0;
+}
+
+.rock {
+    --primary-color: #473F26;
+    --secondary-color: #786B3F;
+    --tertiary-color: #958350;
+    --quarternary-color: #B4A272;
+}
+
+.ice {
+    --primary-color: #113C43;
+    --secondary-color: #1B94A3;
+    --tertiary-color: #66D0E5;
+    --quarternary-color: #DCFCF7;
+}
+
+.ghost {
+    --primary-color: #472B53;
+    --secondary-color: #8F55A4;
+    --tertiary-color: #BD98CB;
+    --quarternary-color: #EFE5F1;
+}
+
+.dragon {
+    --primary-color: #291069;
+    --secondary-color: #8B56FE;
+    --tertiary-color: #D7B1FF;
+    --quarternary-color: #FFFFFF;
+}
+
+.dark {
+    --primary-color: #2E231C;
+    --secondary-color: #604733;
+    --tertiary-color: #936754;
+    --quarternary-color: #4F4F4F;
+}
+
+.steel {
+    --primary-color: #454545;
+    --secondary-color: #7C8E8A;
+    --tertiary-color: #BBC5C4;
+    --quarternary-color: #EDEFEE;
+}
+
+.fairy {
+    --primary-color: #F87EA7;
+    --secondary-color: #FFA0C2;
+    --tertiary-color: #FDD1E0;
+    --quarternary-color: #FFFFFF;
+}
+*/
 *,
 *::before,
 *::after {
@@ -210,7 +344,9 @@ body {
   border: 0.2rem solid grey;
   align-items: center;
   justify-content: center;
+  color: var(--quarternary-color);
   border-radius: 0.8rem;
+  background-image: linear-gradient(to top left, var(--primary-color) 0%, var(--secondary-color) 35%, var(--tertiary-color) 100%);
   overflow: hidden;
   padding: 1.6rem;
   transition: all 0.2s ease-in;
@@ -221,7 +357,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 0.8rem;
-  border: 0.2rem solid grey;
+  border: 0.2rem solid var(--quarternary-color);
 }
 .pokecard__display--img {
   display: block;
@@ -234,9 +370,10 @@ body {
   align-items: center;
   margin: 1.25rem 0;
   padding: 1.25rem;
-  width: 100%;
-  border: 0.2rem solid grey;
+  border: 0.2rem solid var(--quarternary-color);
   border-radius: 0.8rem;
+  background-color: transparent;
+  backdrop-filter: blur(0.2rem);
 }
 .pokecard__detail--top {
   font-size: 1.5rem;

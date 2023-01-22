@@ -5,6 +5,7 @@ import '../src/styles/css/style.css'
 import randomId from "./utils/connectApi"
 import { handlePokeName } from './utils/nameHandler'
 import { searchHandler } from './utils/searchHandler'
+import { typeHandler } from './utils/typeHandler'
 
 import axios from 'axios'
 
@@ -21,8 +22,6 @@ function App() {
   const [pokemonData, setPokemonData] = useState([])
   const [pokemonType, setPokemonType] = useState("")
 
-  const searchBtn = document.querySelector("#search-btn")
-
   const getPokemon = async () => {
 
     const toArray = []
@@ -36,6 +35,8 @@ function App() {
 
       setPokemonType(res.data.types[0].type.name)
       setPokemonData(toArray)
+
+      //setCardType(typeHandler(pokemonType))
 
       console.log(res)
 
@@ -102,6 +103,7 @@ function App() {
 
         {pokemonData.map((data) => {
             return (
+              
                 <Card
 
                   key={data.id}
@@ -113,7 +115,6 @@ function App() {
                   weight={data.weight}
                   battles={data.game_indices.length}
                   order={data.order}
-                
                 />
             )
         })}

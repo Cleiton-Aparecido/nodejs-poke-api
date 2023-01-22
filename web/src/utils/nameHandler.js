@@ -19,13 +19,13 @@ export function handlePokeName(pokeName) {
 }
 
 function cleanString(string) {
-  let cleanString = string.replaceAll("-", " ");
+  let cleanString = string.replace("-", " ");
 
   cleanString = cleanString.split(" ")
 
   cleanString = `${cleanString[0]} (${cleanString[1]})`
 
+  console.log(cleanString)
+
   return cleanString;
 }
-
-console.log(handlePokeName("porygon-22"))

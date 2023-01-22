@@ -5,7 +5,10 @@
     align-items: center;
     justify-content: center;
 
+    color: var(--quarternary-color);
+
     border-radius: $smallest-border-radius;
+    background-image: linear-gradient(to top left, var(--primary-color) 0%, var(--secondary-color) 35%, var(--tertiary-color) 100%);
     overflow: hidden;
 
     padding: 1.6rem;
@@ -21,7 +24,8 @@
         background-position: center;
 
         border-radius: $smallest-border-radius;
-        border: $grey-border;
+        border: $card-border;
+       
 
         &--img {
             display: block;
@@ -38,11 +42,10 @@
 
         margin: 1.25rem 0;
         padding: 1.25rem;
-
-        width: 100%;
-
-        border: $grey-border;
+        border: $card-border;
         border-radius: $smallest-border-radius;
+        background-color: transparent;
+        backdrop-filter: blur(.2rem);
 
         &--top {
             font-size: 1.5rem;

@@ -1,14 +1,8 @@
-
 const typeList = [
-    "grass", "fire", "water", "normal", "flying", "bug", "poison", "electric", "ground", "fighting", "psychic", "rock", "ice", "ghost", "ghost", "dark", "steel", "fairy"
+    "default", "normal", "grass", "fire", "water", "flying", "bug", "poison", "electric", "ground", "fighting", "psychic", "rock", "ice", "ghost", "ghost", "dark", "steel", "fairy", "dragon"
 ]
 
-function typeHandler(type) {
-    if (type.includes(typeList)) {
-
-        
-
-    } else {
-        return undefined
-    }
+export function typeHandler(type) {
+    
+    return typeList.includes(type) ? type : type[0] 
 }
