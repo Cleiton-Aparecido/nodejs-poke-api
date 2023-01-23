@@ -1,16 +1,20 @@
 //import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
+
+// CSS
 import '../src/styles/css/style.css'
 
-import randomId from "./utils/connectApi"
+// UTILS
+import { randomId } from './utils/pokeRandom'
 import { handlePokeName } from './utils/nameHandler'
 import { searchHandler } from './utils/searchHandler'
 
+// EXTERNAL
 import axios from 'axios'
 
+// COMPONENTS
 import { Card } from './components/Card/Card'
 import { Header } from './components/Header/Header'
-//import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
 import { useState, useEffect } from 'react'
 
@@ -79,7 +83,12 @@ function App() {
     
       <div className='content'>
 
-        <Header />
+        <Header
+        
+          logoURL={"../../public/logo_pokemon.png"}
+          userPhotoURL={"../../public/avatar.jpg"}
+
+        />
 
         <div className="search-container">
             <img src="../../public/hero.png" className="search-container__hero"/>

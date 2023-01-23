@@ -1,11 +1,3 @@
-export default function randomId() {
-
-    const min = 1
-    const max = 905
-
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
 async function getPokemon(pokemonName) {
 
     await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)

@@ -6,6 +6,10 @@
     box-sizing: inherit;
 }
 
+::selection {
+    background-color: $color-aqua-dark-2;
+}
+
 html {
     font-size: 62.5%;
 }

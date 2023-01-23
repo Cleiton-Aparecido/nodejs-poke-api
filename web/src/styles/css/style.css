@@ -266,6 +266,10 @@
   box-sizing: inherit;
 }
 
+::selection {
+  background-color: #107394;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -314,40 +318,13 @@ body {
   opacity: 0.9;
 }
 
-.input {
-  width: 80%;
-  margin: auto;
-  padding: 1.25rem;
-  text-align: center;
-  border: 0.2rem solid #000000;
-  outline: none;
-  border-radius: 0.8rem;
-  color: #000;
-  font-family: Inter, Roboto, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-}
-.input::-webkit-search-cancel-button {
-  background-color: #000;
-  color: black;
-}
-
-.random-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 1.5rem;
-  background: rgb(0, 102, 255) url(../../../../public/shuffle.svg);
-  background-size: 80%;
-  background-position: center;
-}
-
 .pokecard {
   display: flex;
   flex-direction: column;
   border: 0.2rem solid grey;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   color: var(--quarternary-color);
   border-radius: 0.8rem;
   background-image: linear-gradient(to top left, var(--primary-color) 0%, var(--secondary-color) 35%, var(--tertiary-color) 100%);
@@ -366,6 +343,7 @@ body {
 .pokecard__display--img {
   display: block;
   width: 50%;
+  position: relative;
   margin: auto;
 }
 .pokecard__detail {
@@ -406,6 +384,34 @@ body {
 
 .pokemon__name {
   text-transform: capitalize;
+}
+
+.input {
+  width: 80%;
+  margin: auto;
+  padding: 1.25rem;
+  text-align: center;
+  border: 0.2rem solid #000000;
+  outline: none;
+  border-radius: 0.8rem;
+  color: #000;
+  font-family: Inter, Roboto, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+.input::-webkit-search-cancel-button {
+  background-color: #000;
+  color: black;
+}
+
+.random-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1.5rem;
+  background: rgb(0, 102, 255) url(../../../../public/shuffle.svg);
+  background-size: 80%;
+  background-position: center;
 }
 
 .footer {

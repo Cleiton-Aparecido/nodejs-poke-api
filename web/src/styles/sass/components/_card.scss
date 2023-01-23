@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
 
+    box-shadow: $shadow-dark;
+
     color: var(--quarternary-color);
 
     border-radius: $smallest-border-radius;
@@ -30,8 +32,8 @@
         &--img {
             display: block;
             width: 50%;
+            position: relative;
             margin: auto;
-            //filter: drop-shadow(1rem rem 1rem #e23);
         }
     }
 

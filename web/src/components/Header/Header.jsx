@@ -1,9 +1,6 @@
 import { Navigation } from "../Navigation/Navigation"
 
-const logoURL = "../../public/logo_pokemon.png"
-const userPhoto = "../../public/avatar.jpg"
-
-export function Header () {
+export function Header ({logoURL, userPhotoURL}) {
     return (
         <header className="header">
            <img className="header__logo" src={logoURL} />
@@ -13,7 +10,7 @@ export function Header () {
             <div className="user">
                 <span className="user__name">username</span>
 
-                <img className="user__icon" src={userPhoto}/>
+                <img className="user__icon" src={userPhotoURL}/>
             </div>
         </header>
     )
