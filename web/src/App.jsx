@@ -5,7 +5,6 @@ import '../src/styles/css/style.css'
 import randomId from "./utils/connectApi"
 import { handlePokeName } from './utils/nameHandler'
 import { searchHandler } from './utils/searchHandler'
-import { typeHandler } from './utils/typeHandler'
 
 import axios from 'axios'
 
@@ -115,6 +114,7 @@ function App() {
                   weight={data.weight}
                   battles={data.game_indices.length}
                   order={data.order}
+
                 />
             )
         })}

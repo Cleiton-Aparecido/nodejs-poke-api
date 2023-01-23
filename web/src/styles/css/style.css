@@ -72,7 +72,7 @@
   --primary-color: #2e5507;
   --secondary-color: #409608;
   --tertiary-color: #68F60B;
-  --quarternary-color: rgb(232, 255, 219);
+  --quarternary-color: rgb(242, 253, 235);
 }
 
 .ground {
@@ -289,6 +289,10 @@ body {
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
+@font-face {
+  font-family: "fire-red";
+  src: url(../../../assets/fonts/pokemon_fire_red.ttf);
+}
 body {
   font-family: Inter, Roboto, Avenir, Helvetica, Arial, sans-serif;
   line-height: 2.4rem;
@@ -372,8 +376,7 @@ body {
   padding: 1.25rem;
   border: 0.2rem solid var(--quarternary-color);
   border-radius: 0.8rem;
-  background-color: transparent;
-  backdrop-filter: blur(0.2rem);
+  background-color: rgba(0, 0, 0, 0);
 }
 .pokecard__detail--top {
   font-size: 1.5rem;
@@ -531,6 +534,7 @@ body {
 }
 .search-container__input {
   margin-top: 2.5rem;
+  font-family: "fire-red", Inter, Roboto, sans-serif;
   background-color: whitesmoke;
   max-width: 50%;
 }

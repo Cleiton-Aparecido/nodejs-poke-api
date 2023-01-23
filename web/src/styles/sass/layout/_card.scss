@@ -44,8 +44,8 @@
         padding: 1.25rem;
         border: $card-border;
         border-radius: $smallest-border-radius;
-        background-color: transparent;
-        backdrop-filter: blur(.2rem);
+        background-color: rgba(0, 0, 0, 0);
+        //backdrop-filter: blur(20rem);
 
         &--top {
             font-size: 1.5rem;

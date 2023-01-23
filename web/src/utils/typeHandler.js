@@ -1,5 +1,5 @@
 const typeList = [
-    "default", "normal", "grass", "fire", "water", "flying", "bug", "poison", "electric", "ground", "fighting", "psychic", "rock", "ice", "ghost", "ghost", "dark", "steel", "fairy", "dragon"
+    "default", "normal", "grass", "fire", "water", "flying", "bug", "poison", "electric", "ground", "fighting", "psychic", "rock", "ice", "ghost", "dark", "steel", "fairy", "dragon"
 ]
 
 export function typeHandler(type) {
