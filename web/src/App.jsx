@@ -30,7 +30,9 @@ function App() {
         />
 
         <Routes>
-          <Route path='/' element={ <Home />}/>
+          <Route path='/' element={ <Home />} />
+          <Route path='/pokelist' element={ <PokeList />} />
+          <Route path='/battle' element={ <Battle />} />
         </Routes>
 
         <Footer />
