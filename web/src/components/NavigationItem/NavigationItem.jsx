@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 export function NavigationItem ({url, title}) {
     return (
         <li className="navigation__item">
-            <a href={url} className="navigation__link" target={"_blank"}>
+            <Link className='navigation__link' to={url}>
                 {title}
-            </a>
+            </Link>
         </li>
     )
 }
