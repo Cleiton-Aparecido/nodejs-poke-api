@@ -33,6 +33,7 @@ function App() {
           <Route path='/' element={ <Home />} />
           <Route path='/pokelist' element={ <PokeList />} />
           <Route path='/battle' element={ <Battle />} />
+          <Route path='/user/:id' />
         </Routes>
 
         <Footer />
