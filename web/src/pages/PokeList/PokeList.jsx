@@ -3,62 +3,90 @@ import { ListCard } from "../../components/ListCard/ListCard"
 
 export function PokeList() {
 
-    const [limit, setLimit] = useState("20")
-    const [offSet, setOffset] = useState("0")
-    const [pokeCount, setPokeCount] = useState("")
-    const [pokemonResult, setPokemonResult] = useState([])
-    const [pokemonData, setPokemonData] = useState([])
-    const [pokemonType, setPokemonType] = useState("")
+    const [pokeURLs, setPokeURLs] = useState([])
+    const [pokeData, setPokeData] = useState([])
 
+    const [query, setQuery] = useState(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=0`)
 
-    async function getPokeList(limit, offSet) {
+    const [pokeCount, setPokeCount] = useState()
+    const [nextPage, setNextPage] = useState([])
+    const [prevPage, setPrevPage] = useState([])
+
+    async function connectAPI(query) {
+
         try {
 
-            await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offSet}`)
+            await fetch(query)
                 .then(response => (response.json()))
                 .then((data) => {
-    
-                    setPokeCount(data.count)
-                    setPokemonResult(data.results)
-                    //setPokemonType(data.types[0].type.name)
-    
+
                     console.log(data)
+
+                    setPokeURLs(data.results)
+
+                    setPokeCount(data.count)
+
+                    setNextPage(data.next)
+                    setPrevPage(data.previous)
                 })
 
-        } catch(err) {
+        } catch(error) {
 
-            console.log(err)
+            console.log(error)
         }
     }
 
-    async function getPokemonByURL(url) {
+    const loadMorePokemons = () => {
+
+        connectAPI(nextPage)
+    }
+
+    const loadLessPokemons = () => {
+
+        connectAPI(prevPage)
+    }
+
+    const getPokemonID = (pokemonURL) => {
+
+        return pokemonURL.replace("https://pokeapi.co/api/v2/pokemon/", "").replace("/", "")
+    }
+
+    async function getPokeData(url) {
         try {
 
             await fetch(url)
-                .then(response => (response.json()))
+                .then(reponse => (reponse.json()))
                 .then((data) => {
 
                     console.log(data)
-                    setPokemonData(data)
+
+                    return data
                 })
 
-        } catch(err) {
+        } catch(error) {
 
-            console.log(err)
+            console.log(error)
         }
     }
 
-
     useEffect(() => {
-        getPokeList(limit, offSet)
+        connectAPI(query)
     }, [])
 
     return (
         
         <div className="pokelist">
 
+            {pokeURLs.map((result) => (
+                <section key={result.name}>
+                    <h1>{result.name}</h1>
+                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonID(result.url)}.png`} />
+                    <h2>{result.url}</h2>
+                </section>
+            ))}
 
-        
+            <button onClick={loadLessPokemons}>Prev</button>
+            <button onClick={loadMorePokemons}>Next</button>
 
         </div>
     )
