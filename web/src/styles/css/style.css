@@ -520,6 +520,47 @@ body {
   opacity: 1.2;
 }
 
+.pokelist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 8rem auto;
+}
+.pokelist__header {
+  background-color: white;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.pokelist__main {
+  border: 1px red solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.pokelist__card {
+  margin: 1.6rem;
+  padding: 1.6rem;
+  width: calc(10vw + 8rem);
+}
+.pokelist__card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pokelist__card__img {
+  width: 75%;
+}
+.pokelist__card__title {
+  text-transform: capitalize;
+}
+
 .search-container {
   display: flex;
   flex-direction: column;

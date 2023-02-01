@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { ListCard } from "../../components/ListCard/ListCard"
 
+import { handlePokeName } from "../../utils/nameHandler"
+
 export function PokeList() {
 
     const [pokeURLs, setPokeURLs] = useState([])
@@ -51,43 +53,46 @@ export function PokeList() {
         return pokemonURL.replace("https://pokeapi.co/api/v2/pokemon/", "").replace("/", "")
     }
 
-    async function getPokeData(url) {
-        try {
-
-            await fetch(url)
-                .then(reponse => (reponse.json()))
-                .then((data) => {
-
-                    console.log(data)
-
-                    return data
-                })
-
-        } catch(error) {
-
-            console.log(error)
-        }
-    }
-
     useEffect(() => {
         connectAPI(query)
     }, [])
 
     return (
         
-        <div className="pokelist">
+        <section className="pokelist">
 
-            {pokeURLs.map((result) => (
-                <section key={result.name}>
-                    <h1>{result.name}</h1>
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonID(result.url)}.png`} />
-                    <h2>{result.url}</h2>
-                </section>
-            ))}
+            <header className="pokelist__header">
+                <nav className="pokelist__nav">
+                    <a className="pokelist__nav__link">link</a>
+                </nav>
+            </header>
 
-            <button onClick={loadLessPokemons}>Prev</button>
-            <button onClick={loadMorePokemons}>Next</button>
+            <main className="pokelist__main">
 
-        </div>
+                {pokeURLs.map((result) => (
+
+                    <article className="pokelist__card" key={result.name}>
+                        <div className="pokelist__card__content">
+
+                            <img className="
+                            pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonID(result.url)}.png`} />
+
+                            <h2 className="pokelist__card__title">
+                                {handlePokeName(result.name)}
+                            </h2>
+                        </div>
+                    </article>
+
+                ))}
+                        
+            </main>
+                
+
+            <aside className="page-controls pokelist__controls">
+                <button className="btn page-controls__btn pokelist__btn" onClick={loadLessPokemons}>Prev</button>
+                <button className="btn page-controls__btn pokelist__btn" onClick={loadMorePokemons}>Next</button>
+            </aside>
+
+        </section>
     )
 }
