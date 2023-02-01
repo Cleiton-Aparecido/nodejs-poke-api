@@ -11,7 +11,9 @@ import { Footer } from './components/Footer/Footer'
 // PAGES
 import { Battle } from './pages/Battle/Battle'
 import { Home } from './pages/Home/Home'
+import { PokeInfo} from './pages/PokeInfo/PokeInfo'
 import { PokeList } from './pages/PokeList/PokeList'
+
 
 
 import { Routes, Route } from 'react-router-dom'
@@ -34,6 +36,7 @@ function App() {
           <Route path='/pokelist' element={ <PokeList />} />
           <Route path='/battle' element={ <Battle />} />
           <Route path='/user/:id' />
+          <Route path="/pokeinfo/:id" element={ <PokeInfo /> }  />
         </Routes>
 
         <Footer />

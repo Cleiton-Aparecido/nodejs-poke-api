@@ -525,7 +525,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
+  width: 80%;
   margin: 8rem auto;
 }
 .pokelist__header {
@@ -540,13 +540,20 @@ body {
   border: 1px red solid;
   display: flex;
   flex-wrap: wrap;
+  gap: 1.6rem;
   align-items: center;
   justify-content: center;
+  padding: 6.4rem;
 }
 .pokelist__card {
   margin: 1.6rem;
   padding: 1.6rem;
-  width: calc(10vw + 8rem);
+  width: calc(10vw + 10rem);
+  background-color: #419cbd;
+  border-radius: 2.5rem;
+}
+.pokelist__card * {
+  transition: all 0.2s ease;
 }
 .pokelist__card__content {
   display: flex;
@@ -557,8 +564,12 @@ body {
 .pokelist__card__img {
   width: 75%;
 }
+.pokelist__card__img:hover {
+  transform: scale(1.25);
+}
 .pokelist__card__title {
   text-transform: capitalize;
+  color: whitesmoke;
 }
 
 .search-container {

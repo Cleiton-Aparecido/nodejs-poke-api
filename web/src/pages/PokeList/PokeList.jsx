@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { ListCard } from "../../components/ListCard/ListCard"
 
 import { handlePokeName } from "../../utils/nameHandler"
+import { Link } from "react-router-dom"
 
 export function PokeList() {
 
@@ -64,26 +65,36 @@ export function PokeList() {
             <header className="pokelist__header">
                 <nav className="pokelist__nav">
                     <a className="pokelist__nav__link">link</a>
+                    <a className="pokelist__nav__link">link</a>
+                    <a className="pokelist__nav__link">link</a>
+                    <a className="pokelist__nav__link">link</a>
                 </nav>
             </header>
 
             <main className="pokelist__main">
 
-                {pokeURLs.map((result) => (
+                {pokeURLs.map((result) => {
 
-                    <article className="pokelist__card" key={result.name}>
-                        <div className="pokelist__card__content">
+                    const id = getPokemonID(result.url)
 
-                            <img className="
-                            pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonID(result.url)}.png`} />
+                    return (
 
-                            <h2 className="pokelist__card__title">
-                                {handlePokeName(result.name)}
-                            </h2>
-                        </div>
-                    </article>
+                        <article className="pokelist__card" key={id}>
+                            <div className="pokelist__card__content">
 
-                ))}
+                                <img className="
+                                pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
+
+                                <h2 className="pokelist__card__title">
+                                    <Link to={`pokeinfo/${id}`} id={id}>
+                                        {handlePokeName(result.name)}
+                                    </Link>
+                                </h2>
+                            </div>
+                        </article>
+                    )
+
+                })}
                         
             </main>
                 
