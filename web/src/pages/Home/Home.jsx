@@ -1,9 +1,10 @@
 //import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
+import { useState, useEffect } from 'react'
 
 // UTILS
-import { randomId } from '../../utils/pokeRandom'
 import { handlePokeName } from '../../utils/nameHandler'
+import { randomId } from '../../utils/pokeRandom'
 import { searchHandler } from '../../utils/searchHandler'
 
 // EXTERNAL
@@ -11,7 +12,6 @@ import axios from 'axios'
 
 // COMPONENTS
 import { Card } from '../../components/Card/Card'
-import { useState, useEffect } from 'react'
 
 export function Home() {
 
@@ -78,6 +78,7 @@ export function Home() {
   
 
     <div className="search-container">
+      
         <img src="../../public/hero.png" className="search-container__hero"/>
         
         <form className="search-container__form" onSubmit={handleSubmit}>

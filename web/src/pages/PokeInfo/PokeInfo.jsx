@@ -5,11 +5,11 @@ export function PokeInfo( {pokeID } ) {
     const [pokeData, setPokeData] = useState([])
     const [pokeType, setPokeType] = useState("")
 
-    async function getPokeInfo(id) {
+    async function getPokeInfo() {
 
         try {
 
-            await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+            await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeID}`)
                 .then(res => (res.json()))
                 .then((data) => {
 
@@ -27,7 +27,7 @@ export function PokeInfo( {pokeID } ) {
 
     useEffect(() => {
 
-        getPokeInfo(pokeID)
+        getPokeInfo()
     }, [])
 
     return (

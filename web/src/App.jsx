@@ -36,7 +36,7 @@ function App() {
           <Route path='/pokelist' element={ <PokeList />} />
           <Route path='/battle' element={ <Battle />} />
           <Route path='/user/:id' />
-          <Route path="/pokeinfo/:id" element={ <PokeInfo /> }  />
+          <Route path="/pokeinfo/:id" element={ <PokeInfo /> } />
         </Routes>
 
         <Footer />

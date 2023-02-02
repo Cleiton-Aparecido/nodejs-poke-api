@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { ListCard } from "../../components/ListCard/ListCard"
+import { InnerHeader } from "../../components/InnerHeader/InnerHeader"
+import { PaginationMenu } from "../../components/PaginationMenu/PaginationMenu"
 
 import { handlePokeName } from "../../utils/nameHandler"
 import { Link } from "react-router-dom"
@@ -62,14 +64,8 @@ export function PokeList() {
         
         <section className="pokelist">
 
-            <header className="pokelist__header">
-                <nav className="pokelist__nav">
-                    <a className="pokelist__nav__link">link</a>
-                    <a className="pokelist__nav__link">link</a>
-                    <a className="pokelist__nav__link">link</a>
-                    <a className="pokelist__nav__link">link</a>
-                </nav>
-            </header>
+            <InnerHeader styleClass={"pokelist__header"} />
+            
 
             <main className="pokelist__main">
 
@@ -79,30 +75,26 @@ export function PokeList() {
 
                     return (
 
-                        <article className="pokelist__card" key={id}>
-                            <div className="pokelist__card__content">
-
-                                <img className="
-                                pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
-
-                                <h2 className="pokelist__card__title">
-                                    <Link to={`pokeinfo/${id}`} id={id}>
-                                        {handlePokeName(result.name)}
-                                    </Link>
-                                </h2>
-                            </div>
-                        </article>
+                        <ListCard 
+                        
+                            key={id}
+                            id={id}
+                            name={handlePokeName(result.name)}
+                        
+                        />
                     )
 
                 })}
                         
             </main>
-                
 
-            <aside className="page-controls pokelist__controls">
-                <button className="btn page-controls__btn pokelist__btn" onClick={loadLessPokemons}>Prev</button>
-                <button className="btn page-controls__btn pokelist__btn" onClick={loadMorePokemons}>Next</button>
-            </aside>
+            <PaginationMenu
+            
+                extraStyle={"pokelist__controls"}
+                nextFunction={loadMorePokemons}
+                prevFunction={loadLessPokemons}
+            
+            />
 
         </section>
     )

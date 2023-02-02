@@ -1,21 +1,21 @@
-export function ListCard ({ imgURL, pokeName, pokeType, pokeID }) {
+import { Link } from "react-router-dom"
+
+export function ListCard ({ id, name}) {
+
     return (
-        <div className="list-card">
-            <img className="list-card__img" src={imgURL} />
 
-            <section className="list-card__details">
-                <h2 className="list-card__details--name">
-                    {pokeName}
+        <article className="pokelist__card" key={id}>
+            <div className="pokelist__card__content">
+
+                <img className="pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
+
+                <h2 className="pokelist__card__title">
+                    <Link to={`pokeinfo/${id}`} pokeID={id}>
+                        {name}
+                    </Link>
                 </h2>
+            </div>
+        </article>
 
-                <h3 className="list-card__details--type">
-                    {pokeType}
-                </h3>
-
-                <p className="list-card__details--id">
-                    {pokeID}
-                </p>
-            </section>
-        </div>
     )
 }
