@@ -2,7 +2,12 @@ import { typeHandler } from "../../utils/typeHandler"
 
 export function Card({id, sprite, name, type, height, weight, battles, order}) {
     return (
-        <div id={`pokecard${id}`} className={`pokecard ${typeHandler(type)}`} key={id}>
+        <div
+            key={id} 
+            id={`pokecard${id}`}
+            className={`pokecard ${typeHandler(type)}`}
+            title={name}
+        >
             <div className='pokecard__display'>
                 <img src={sprite} className="pokecard__display--img"/>
             </div>

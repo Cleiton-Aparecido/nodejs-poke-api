@@ -79,17 +79,36 @@ export function Home() {
 
     <div className="search-container">
       
-        <img src="../../public/hero.png" className="search-container__hero"/>
+        <img src="/hero.png" className="search-container__hero"/>
         
         <form className="search-container__form" onSubmit={handleSubmit}>
 
-            <input className="search-container__input input" onChange={handleChange} type={"search"} required minLength={3} maxLength={35} placeholder="Search Here"></input>
+            <input 
+            
+              className="search-container__input input" 
+              onChange={handleChange} 
+              type={"search"} 
+              required minLength={3} 
+              maxLength={35} 
+              placeholder="Search Here" >
+
+            </input>
 
             <section className='button-container'>
 
-              <button id='search-btn' className="button-container__btn-search search-btn btn" title='Search for a Pokémon'>Search</button>
+              <button 
+                id='search-btn'
+                className="button-container__btn-search search-btn btn" title='Search for a Pokémon' 
+              >
+                Search
+              </button>
 
-              <button id='random-btn' className='button-container__btn-random random-btn btn' title='Random Pokémon' onClick={handleRandomPokemon}></button>
+              <button 
+                  id='random-btn' 
+                  className='button-container__btn-random random-btn btn' title='Random Pokémon' 
+                  onClick={handleRandomPokemon} >
+
+              </button>
 
             </section>
 

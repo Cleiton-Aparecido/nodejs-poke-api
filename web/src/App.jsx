@@ -26,8 +26,8 @@ function App() {
 
         <Header
         
-          logoURL={"../../public/logo_pokemon.png"}
-          userPhotoURL={"../../public/avatar.jpg"}
+          logoURL={"/logo_pokemon.png"}
+          userPhotoURL={"/avatar.jpg"}
 
         />
 

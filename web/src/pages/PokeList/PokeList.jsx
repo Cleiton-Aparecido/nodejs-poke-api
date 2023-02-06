@@ -1,10 +1,13 @@
+// LIBS
 import { useEffect, useState } from "react"
-import { ListCard } from "../../components/ListCard/ListCard"
+
+// COMPONENTS
 import { InnerHeader } from "../../components/InnerHeader/InnerHeader"
+import { ListCard } from "../../components/ListCard/ListCard"
 import { PaginationMenu } from "../../components/PaginationMenu/PaginationMenu"
 
+// UTILS
 import { handlePokeName } from "../../utils/nameHandler"
-import { Link } from "react-router-dom"
 
 export function PokeList() {
 
@@ -57,7 +60,9 @@ export function PokeList() {
     }
 
     useEffect(() => {
+
         connectAPI(query)
+        
     }, [])
 
     return (

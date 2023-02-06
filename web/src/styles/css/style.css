@@ -334,7 +334,7 @@ body {
 }
 .pokecard__display {
   width: 100%;
-  background-image: url(../../../../public/pokemon_background.png);
+  background-image: url(/pokemon_background.png);
   background-size: cover;
   background-position: center;
   border-radius: 0.8rem;
@@ -520,58 +520,6 @@ body {
   opacity: 1.2;
 }
 
-.pokelist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: 8rem auto;
-}
-.pokelist__header {
-  background-color: white;
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-}
-.pokelist__main {
-  border: 1px red solid;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.6rem;
-  align-items: center;
-  justify-content: center;
-  padding: 6.4rem;
-}
-.pokelist__card {
-  margin: 1.6rem;
-  padding: 1.6rem;
-  width: calc(10vw + 10rem);
-  background-color: #419cbd;
-  border-radius: 2.5rem;
-}
-.pokelist__card * {
-  transition: all 0.2s ease;
-}
-.pokelist__card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.pokelist__card__img {
-  width: 75%;
-}
-.pokelist__card__img:hover {
-  transform: scale(1.25);
-}
-.pokelist__card__title {
-  text-transform: capitalize;
-  color: whitesmoke;
-}
-
 .search-container {
   display: flex;
   flex-direction: column;
@@ -622,6 +570,80 @@ body {
 .search-container .button-container__btn-random {
   align-self: baseline;
   background-color: #107394;
+}
+
+.pokelist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  color: whitesmoke;
+  margin: 4rem auto;
+}
+.pokelist__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 4rem 0rem;
+  background-color: #419cbd;
+  border-radius: 0.8rem;
+}
+.pokelist__nav {
+  width: 70%;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pokelist__nav__link:link, .pokelist__nav__link:visited {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.pokelist__main {
+  border: 1px red solid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 6.4rem;
+}
+.pokelist__card {
+  margin: 1.6rem;
+  padding: 1.6rem;
+  width: calc(10vw + 8rem);
+  background-color: #419cbd;
+  border-radius: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.pokelist__card:hover {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+.pokelist__card * {
+  transition: all 0.2s ease;
+}
+.pokelist__card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.pokelist__card__img {
+  width: 75%;
+}
+.pokelist__card__title {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: whitesmoke;
+}
+.pokelist__card__link:link, .pokelist__card__link:visited {
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

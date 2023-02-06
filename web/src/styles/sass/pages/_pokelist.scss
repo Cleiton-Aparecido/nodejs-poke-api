@@ -1,0 +1,110 @@
+.pokelist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+
+    color: $font-color-primary;
+
+    margin: 4rem auto;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        width: 100%;
+
+        padding: 4rem 0rem;
+
+        background-color: $color-aqua-light;
+
+        border-radius: $smallest-border-radius;
+
+
+    }
+
+    &__nav {
+
+        width: 70%;
+
+        align-self: flex-end;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+
+        &__link:link,
+        &__link:visited {
+            color: $font-color-primary;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+
+    &__main {
+       border: 1px red solid;
+       display: flex;
+       flex-wrap: wrap;
+
+       gap: 1.6rem;
+
+       align-items: center;
+       justify-content: center;
+
+       padding: 6.4rem;
+    }
+
+    &__card {
+
+        margin: 1.6rem;
+        padding: 1.6rem;
+
+        width: calc(10vw + 8rem);
+
+        background-color: $color-aqua-light;
+        border-radius: $default-border-radius;
+
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:hover {
+            box-shadow: .5rem .5rem 1rem rgb(0 0 0 / 30%);
+        }
+
+        
+        & * {
+            
+            transition: all .2s ease;
+        }
+        
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+        }
+
+        &__img {
+            width: 75%;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            color: $font-color-primary;
+        }
+
+        &__link:link,
+        &__link:visited {
+
+            color: $font-color-primary;
+            text-decoration: none;
+        }
+    }
+}
