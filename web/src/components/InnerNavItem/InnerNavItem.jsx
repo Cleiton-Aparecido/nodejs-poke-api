@@ -1,15 +1,8 @@
-export function InnerNavItem({name, action, href, styleClass, target}) {
+export function InnerNavItem({name, action, imgPath, styleClass}) {
 
     return (
 
-        <a
-            className={styleClass}
-            onClick={action || ""} 
-            href={href || "#"} 
-            target={target || "_blank"}
-        >
-            {name}
-        </a>
+        <img id={`${name}-icon`} className={`icon ${styleClass}`} src={imgPath} onClick={action} />
 
     )
 }

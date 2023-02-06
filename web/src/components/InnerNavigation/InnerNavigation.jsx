@@ -1,22 +1,26 @@
 import { InnerNavItem } from "../InnerNavItem/InnerNavItem"
 
-const linkList = [
-
+const menuItems = [
     {
-        action: "/",
-        name: "link"
+        name: "search",
+        iconPath: "../../assets/search.svg",
+        fn: ""
     },
 
     {
-        action: "/",
-        name: "link"
+        name: "sort",
+        iconPath: "../assets/sort.svg",
+        fn: ""
     },
 
     {
-        action: "/",
-        name: "link"
+        name: "filter_list",
+        iconPath: "../assets/filter_list.svg",
+        fn: ""
     }
 ]
+
+
 
 export function InnerNavigation() {
 
@@ -24,13 +28,14 @@ export function InnerNavigation() {
 
         <nav className="pokelist__nav">
 
-            {linkList.map((button) => (
+            {menuItems.map((item) => (
                 
                 <InnerNavItem
                 
-                    key={button.name}
+                    key={item.name}
                     styleClass={"pokelist__nav__link"}
-                    name={button.name}
+                    imgPath={item.iconPath}
+                    name={item.name}
                 
                 />
             ))}
