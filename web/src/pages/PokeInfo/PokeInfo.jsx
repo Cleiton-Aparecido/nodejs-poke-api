@@ -43,26 +43,34 @@ export function PokeInfo() {
 
     return (
 
-        <div>
+        <main className="pokeinfo">
+            <section className="pokeinfo__container-left">
+                <figure className="pokeinfo__img-wrapper">
+                    <img className="pokeinfo__img-wrapper__img" src={`${pokeImgs["front_default"]}`} alt={`${pokeData.name} image`} />
+                </figure>
 
+                
+                <h2 className="pokeinfo__name">
+                    {pokeData.name}
+                </h2>
+                <span className="pokeinfo__id">#{pokeData.id}</span>
+            
+            </section>
 
-            <main className="pokeinfo">
-                <section className="pokeinfo__container-left">
-                    <img src={`${pokeImgs["front_default"]}`} alt="" className="pokeinfo__img" />
+            <section className="pokeinfo__container-right">
+                {pokeType}
+                <p>{pokeData.name}</p>
+            </section>
 
-                    <h2 className="pokeinfo__name">{pokeData.name}</h2>
-                    <span className="pokeinfo__id">{pokeData.id}</span>
-                </section>
+            <section className="pokeinfo__container-bottom">
+                <div className="pokeinfo__container-bottom__left">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
 
-                <section className="pokeinfo__container-right">
-                    {pokeType}
-                </section>
-
-                <section className="pokeinfo__container-bottom">
-
-                </section>
-            </main>
-
-        </div>
+                <div className="pokeinfo__container-bottom__right">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, fuga.</p>
+                </div>
+            </section>
+        </main>
     )
 }

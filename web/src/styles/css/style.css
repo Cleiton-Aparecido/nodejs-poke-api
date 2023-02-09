@@ -305,7 +305,7 @@ body {
 
 @font-face {
   font-family: "fire-red";
-  src: url(../../../assets/fonts/pokemon_fire_red.ttf);
+  src: url(src/assets/fonts/pokemon_fire_red.ttf);
 }
 body {
   font-family: Inter, Roboto, Avenir, Helvetica, Arial, sans-serif;
@@ -413,6 +413,43 @@ body {
 .input::-webkit-search-cancel-button {
   background-color: #000;
   color: black;
+}
+
+.pokeinfo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #419cbd;
+  color: whitesmoke;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  width: calc(20vw + 55rem);
+  margin: 4rem auto;
+  padding: 3.2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+.pokeinfo__container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pokeinfo__name {
+  align-self: center;
+  text-decoration: underline;
+}
+.pokeinfo__id {
+  font-size: 1rem;
+}
+.pokeinfo__img-wrapper {
+  width: 100%;
+  background-color: whitesmoke;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  border-radius: 0.8rem;
+}
+.pokeinfo__img-wrapper__img {
+  display: block;
+  margin: 0 auto;
 }
 
 .random-btn {

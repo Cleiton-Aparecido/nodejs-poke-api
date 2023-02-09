@@ -10,7 +10,7 @@ export function ListCard ({ id, name}) {
                 <img className="pokelist__card__img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
 
                 <h2 className="pokelist__card__title">
-                    <Link className="pokelist__card__link" to={`pokemon/${id}`}>
+                    <Link className="pokelist__card__link" to={`/pokemon/${id}`}>
                         {name}
                     </Link>
                 </h2>

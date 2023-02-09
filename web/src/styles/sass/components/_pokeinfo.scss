@@ -1,0 +1,58 @@
+.pokeinfo {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $color-aqua-light;
+    color: $font-color-primary;
+    
+    text-transform: capitalize;
+    font-size: 1.25rem;
+
+    width: calc(20vw + 55rem);
+
+    margin: 4rem auto;
+    padding: 3.2rem;
+
+    border-radius: $smallest-border-radius;
+
+    box-shadow: $shadow-dark;
+
+    &__container {
+
+        &-left {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__name {
+
+        align-self: center;
+        text-decoration: underline;
+    }
+
+    &__id {
+
+        font-size: 1rem;
+    }
+
+    &__img-wrapper {
+
+        width: 100%;
+        background-color: whitesmoke;
+
+        box-shadow: $shadow-light;
+        
+        border-radius: $smallest-border-radius;
+
+        &__img {
+
+            display: block;
+            margin: 0 auto;
+
+        }
+    }
+}
