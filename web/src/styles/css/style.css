@@ -288,7 +288,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   background-color: #107394;
-  padding: 4rem;
+  padding: 6rem;
 }
 
 .content {
@@ -325,7 +325,7 @@ body {
   cursor: pointer;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .pokecard {
@@ -415,6 +415,25 @@ body {
   color: black;
 }
 
+.page-controls {
+  display: flex;
+  gap: 1.6rem;
+  margin: 2rem auto;
+}
+.page-controls__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #107394;
+  padding: 2.5rem 3.2rem;
+  cursor: pointer;
+}
+.page-controls__btn:hover {
+  opacity: 0.99;
+}
+
 .pokeinfo {
   display: flex;
   justify-content: space-between;
@@ -442,7 +461,8 @@ body {
   font-size: 1rem;
 }
 .pokeinfo__img-wrapper {
-  width: 100%;
+  width: 20rem;
+  overflow: hidden;
   background-color: whitesmoke;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   border-radius: 0.8rem;

@@ -58,8 +58,9 @@ export function PokeInfo() {
             </section>
 
             <section className="pokeinfo__container-right">
-                {pokeType}
-                <p>{pokeData.name}</p>
+                <p>Type: {pokeType}</p>
+                <p>Weight: 90kg</p>
+                <p>Height: 1.50m</p>
             </section>
 
             <section className="pokeinfo__container-bottom">

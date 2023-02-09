@@ -25,6 +25,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+
         }
     }
 
@@ -41,7 +42,8 @@
 
     &__img-wrapper {
 
-        width: 100%;
+        width: 20rem;
+        overflow: hidden;
         background-color: whitesmoke;
 
         box-shadow: $shadow-light;

@@ -1,0 +1,28 @@
+.page-controls {
+    display: flex;
+    gap: 1.6rem;
+
+    margin: 2rem auto;
+
+    &__btn {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: $smallest-border-radius;
+
+        background-color: $color-aqua-dark-2;
+
+        padding: 2.5rem 3.2rem;
+
+        cursor: pointer;
+
+        &:hover {
+
+            opacity: .99;
+        }
+    }
+}
