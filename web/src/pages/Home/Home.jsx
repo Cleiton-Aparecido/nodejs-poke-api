@@ -76,7 +76,6 @@ export function Home() {
 
   return (
   
-
     <div className="search-container">
       
         <img src="/hero.png" className="search-container__hero"/>
@@ -84,7 +83,7 @@ export function Home() {
         <form className="search-container__form" onSubmit={handleSubmit}>
 
             <input 
-            
+    
               className="search-container__input input" 
               onChange={handleChange} 
               type={"search"} 

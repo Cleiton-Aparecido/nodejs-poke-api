@@ -3,19 +3,19 @@ import { InnerNavItem } from "../InnerNavItem/InnerNavItem"
 const menuItems = [
     {
         name: "search",
-        iconPath: "../../assets/search.svg",
+        iconPath: "src/assets/icons/search.svg",
         fn: ""
     },
 
     {
         name: "sort",
-        iconPath: "../assets/sort.svg",
+        iconPath: "src/assets/icons/sort.svg",
         fn: ""
     },
 
     {
         name: "filter_list",
-        iconPath: "../assets/filter_list.svg",
+        iconPath: "src/assets/icons/filter_list.svg",
         fn: ""
     }
 ]

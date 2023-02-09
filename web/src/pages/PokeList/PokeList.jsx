@@ -1,5 +1,6 @@
 // LIBS
 import { useEffect, useState } from "react"
+import { Route, Routes, useParams } from "react-router-dom"
 
 // COMPONENTS
 import { InnerHeader } from "../../components/InnerHeader/InnerHeader"
@@ -59,6 +60,11 @@ export function PokeList() {
         return pokemonURL.replace("https://pokeapi.co/api/v2/pokemon/", "").replace("/", "")
     }
 
+    const PokemonProfile = () => {
+
+        const { id } = useParams()
+    }
+
     useEffect(() => {
 
         connectAPI(query)
@@ -69,8 +75,7 @@ export function PokeList() {
         
         <section className="pokelist">
 
-            <InnerHeader styleClass={"pokelist__header"} />
-            
+            <InnerHeader styleClass={"pokelist__header"} />            
 
             <main className="pokelist__main">
 
