@@ -438,20 +438,39 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #419cbd;
+  border: 0.4rem solid #83deff;
   color: whitesmoke;
   text-transform: capitalize;
   font-size: 1.25rem;
-  width: calc(20vw + 55rem);
+  width: calc(20vw + 60rem);
   margin: 4rem auto;
-  padding: 3.2rem;
+  padding: 6.4rem;
   border-radius: 0.8rem;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 .pokeinfo__container-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+.pokeinfo__container-left-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pokeinfo__container-left, .pokeinfo__container-right, .pokeinfo__container-bottom {
+  margin: 0 1.2rem;
+}
+.pokeinfo__container-right, .pokeinfo__container-bottom {
+  border: 0.4rem solid #83deff;
+  border-radius: 0.8rem;
+  background-color: #107394;
+  padding: 3.2rem;
+}
+.pokeinfo__container-right {
+  min-width: 25%;
 }
 .pokeinfo__name {
   align-self: center;
@@ -461,10 +480,11 @@ body {
   font-size: 1rem;
 }
 .pokeinfo__img-wrapper {
-  width: 20rem;
+  width: 16rem;
   overflow: hidden;
-  background-color: whitesmoke;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  background-image: url(../../../../public/pokemon_background_2.jpg.jpg);
+  background-position: bottom;
+  border: 0.4rem solid #83deff;
   border-radius: 0.8rem;
 }
 .pokeinfo__img-wrapper__img {

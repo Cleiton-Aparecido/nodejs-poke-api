@@ -50,10 +50,12 @@ export function PokeInfo() {
                 </figure>
 
                 
-                <h2 className="pokeinfo__name">
-                    {pokeData.name}
-                </h2>
-                <span className="pokeinfo__id">#{pokeData.id}</span>
+                <section className="pokeinfo__container-left-2">
+                    <h2 className="pokeinfo__name">
+                        {pokeData.name}
+                    </h2>
+                    <span className="pokeinfo__id">#{pokeData.id}</span>
+                </section>
             
             </section>
 

@@ -3,29 +3,52 @@
     justify-content: space-between;
 
     background-color: $color-aqua-light;
+    border: $light-border;
     color: $font-color-primary;
+
     
     text-transform: capitalize;
     font-size: 1.25rem;
 
-    width: calc(20vw + 55rem);
+    width: calc(20vw + 60rem);
 
     margin: 4rem auto;
-    padding: 3.2rem;
+    padding: 6.4rem;
 
     border-radius: $smallest-border-radius;
 
-    box-shadow: $shadow-dark;
-
     &__container {
-
+        
         &-left {
-
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            
+        }
 
+        &-left-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &-left, &-right, &-bottom {
+
+            margin: 0 1.2rem;
+        }
+
+        &-right, &-bottom {
+            border: $light-border;
+            border-radius: $smallest-border-radius;
+            background-color: $color-aqua-dark-2;
+            padding: 3.2rem;
+        }
+
+        &-right {
+            min-width: 25%;
         }
     }
 
@@ -42,11 +65,12 @@
 
     &__img-wrapper {
 
-        width: 20rem;
+        width: 16rem;
         overflow: hidden;
-        background-color: whitesmoke;
-
-        box-shadow: $shadow-light;
+        background-image: url(../../../../public/pokemon_background_2.jpg.jpg);
+        //background-size: c;
+        background-position: bottom;
+        border: $light-border;
         
         border-radius: $smallest-border-radius;
 
