@@ -22,9 +22,9 @@
 
         background-color: $color-aqua-light;
 
-        border-radius: $smallest-border-radius;
+        border-radius: $small-border-radius;
 
-
+        border: $light-border;
     }
 
     &__nav {
@@ -86,7 +86,7 @@
         }
 
         &__display {
-           width: 80%;
+           width: 85%;
            border-radius: $smallest-border-radius;
            border: $tiny-light-border;
            background-color: whitesmoke

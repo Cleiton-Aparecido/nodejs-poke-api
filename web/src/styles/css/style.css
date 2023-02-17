@@ -678,7 +678,8 @@ body {
   width: 100%;
   padding: 4rem 0rem;
   background-color: #419cbd;
-  border-radius: 0.8rem;
+  border-radius: 1.5rem;
+  border: 0.4rem solid #83deff;
 }
 .pokelist__nav {
   width: 70%;
@@ -718,7 +719,7 @@ body {
   transition: all 0.2s ease;
 }
 .pokelist__card__display {
-  width: 80%;
+  width: 85%;
   border-radius: 0.8rem;
   border: 0.2rem solid #83deff;
   background-color: whitesmoke;
