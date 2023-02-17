@@ -74,6 +74,7 @@ export function PokeInfo() {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, fuga.</p>
                 </div>
             </section>
+
         </main>
     )
 }

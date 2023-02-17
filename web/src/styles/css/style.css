@@ -415,25 +415,68 @@ body {
   color: black;
 }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .page-controls {
   display: flex;
   gap: 1.6rem;
   margin: 2rem auto;
 }
 .page-controls__btn {
-  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  padding: 2.5rem 3.2rem;
+  border: 0.2rem solid #83deff;
   border-radius: 1.5rem;
   background-color: #107394;
-  border: 0.2rem solid #83deff;
-  padding: 2.5rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .page-controls__btn:hover {
   opacity: 0.9;
+}
+.page-controls__btn:active {
+  transform: translateY(0.2rem);
 }
 
 .pokeinfo {
@@ -495,10 +538,10 @@ body {
 }
 
 .random-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 1.5rem;
-  background: rgb(0, 102, 255) url(../../../../public/shuffle.svg);
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 1.6rem;
+  background-image: url(/shuffle.svg);
   background-size: 80%;
   background-position: center;
 }
@@ -696,6 +739,7 @@ body {
 }
 .pokelist__main {
   border: 1px red solid;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;

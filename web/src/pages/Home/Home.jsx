@@ -103,6 +103,7 @@ export function Home() {
               </button>
 
               <button 
+              
                   id='random-btn' 
                   className='button-container__btn-random random-btn btn' title='Random Pokémon' 
                   onClick={handleRandomPokemon} >

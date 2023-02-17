@@ -1,6 +1,5 @@
 // LIBS
 import { useEffect, useState } from "react"
-import { Route, Routes, useParams } from "react-router-dom"
 
 // COMPONENTS
 import { InnerHeader } from "../../components/InnerHeader/InnerHeader"
@@ -13,7 +12,7 @@ import { handlePokeName } from "../../utils/nameHandler"
 export function PokeList() {
 
     const [pokeURLs, setPokeURLs] = useState([])
-    const [pokeData, setPokeData] = useState([])
+    const [isLoaded, setIsloaded] = useState(false)
 
     const [query, setQuery] = useState(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=0`)
 
@@ -37,6 +36,8 @@ export function PokeList() {
 
                     setNextPage(data.next)
                     setPrevPage(data.previous)
+
+                    setIsloaded(true)
                 })
 
         } catch(error) {
@@ -60,11 +61,6 @@ export function PokeList() {
         return pokemonURL.replace("https://pokeapi.co/api/v2/pokemon/", "").replace("/", "")
     }
 
-    const PokemonProfile = () => {
-
-        const { id } = useParams()
-    }
-
     useEffect(() => {
 
         connectAPI(query)
@@ -75,11 +71,15 @@ export function PokeList() {
         
         <section className="pokelist">
 
-            <InnerHeader styleClass={"pokelist__header"} />            
+            <InnerHeader styleClass={"pokelist__header"} />       
 
             <main className="pokelist__main">
 
-                {pokeURLs.map((result) => {
+                {isLoaded 
+                
+                ? 
+
+                pokeURLs.map((result) => {
 
                     const id = getPokemonID(result.url)
 
@@ -94,9 +94,17 @@ export function PokeList() {
                         />
                     )
 
-                })}
+                })
+
+                : 
+
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+                }
                         
             </main>
+
+            
 
             <PaginationMenu
             
