@@ -421,17 +421,19 @@ body {
   margin: 2rem auto;
 }
 .page-controls__btn {
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  border-radius: 0.8rem;
+  border-radius: 1.5rem;
   background-color: #107394;
+  border: 0.2rem solid #83deff;
   padding: 2.5rem 3.2rem;
   cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .page-controls__btn:hover {
-  opacity: 0.99;
+  opacity: 0.9;
 }
 
 .pokeinfo {
@@ -698,11 +700,12 @@ body {
   gap: 1.6rem;
   align-items: center;
   justify-content: center;
-  padding: 6.4rem;
+  padding: 6.4rem 0;
 }
 .pokelist__card {
   margin: 1.6rem;
-  padding: 1.6rem;
+  padding: 3.2rem;
+  border: 0.4rem solid #83deff;
   width: calc(10vw + 8rem);
   background-color: #419cbd;
   border-radius: 2.5rem;
@@ -714,6 +717,12 @@ body {
 .pokelist__card * {
   transition: all 0.2s ease;
 }
+.pokelist__card__display {
+  width: 80%;
+  border-radius: 0.8rem;
+  border: 0.2rem solid #83deff;
+  background-color: whitesmoke;
+}
 .pokelist__card__content {
   display: flex;
   flex-direction: column;
@@ -721,7 +730,9 @@ body {
   align-content: center;
 }
 .pokelist__card__img {
-  width: 75%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 .pokelist__card__title {
   font-size: 1.8rem;
@@ -729,8 +740,16 @@ body {
   color: whitesmoke;
 }
 .pokelist__card__link:link, .pokelist__card__link:visited {
+  padding: 0.8rem 1.6rem;
   color: whitesmoke;
+  border-radius: 1.5rem;
+  background-color: #107394;
   text-decoration: none;
+  border: 0.2rem solid #83deff;
+  word-wrap: break-word;
+}
+.pokelist__card__link:link:hover, .pokelist__card__link:visited:hover {
+  background-color: #1285ab;
 }
 
 /*# sourceMappingURL=style.css.map */

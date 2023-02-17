@@ -6,23 +6,27 @@
 
     &__btn {
 
+        font-size: 2rem;
+
         display: flex;
 
         align-items: center;
         justify-content: center;
 
-        border: none;
-        border-radius: $smallest-border-radius;
+        border-radius: $small-border-radius;
 
         background-color: $color-aqua-dark-2;
+        border: $tiny-light-border;
 
         padding: 2.5rem 3.2rem;
 
         cursor: pointer;
 
+        transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
         &:hover {
 
-            opacity: .99;
+            opacity: .9;
         }
     }
 }
